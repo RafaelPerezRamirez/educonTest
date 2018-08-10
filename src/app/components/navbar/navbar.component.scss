@@ -1,0 +1,116 @@
+@import '../../../styles/variables';
+.into-nav{
+    width: $widthCanvas;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.nav-link{
+    font-family: $fontSans;
+    color: $colorGray;
+    text-decoration: none;
+    font-size: $fontSmall;
+    margin-right: 5px;
+    position: relative;
+}
+a.nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: $colorRed;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: $simple;
+}
+a.search-link img {
+    position: relative;
+    top: 6px;
+}
+.content-links span:hover a, .content-links span:hover i{
+    color: $colorRed;
+}
+.content-links span:hover a.nav-link::after{
+    width: 100%;
+}
+.content-links span{
+    margin-right: 20px;
+}
+span i {
+    font-size: 13px;
+    color: $colorGray;
+}
+.content-links {
+    position: relative;
+}
+.button-responsive{
+    display: none;
+}
+.main-logo{
+    position: relative;
+}
+.selected a, .selected i{
+    color: $colorRed;
+}
+.selected a.nav-link::after{
+    width: 100%;
+}
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100000;
+        background: white!important;
+    }
+    .main-logo{
+        width: 100%;
+    }
+    .into-nav{
+        flex-flow: row wrap;
+        width: 100%;
+        background: white;
+    }
+    .content-links {
+        background:  white;
+        width: 100%;
+        top: -6px;
+        display: none;
+    }
+    .content-links span {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .content-links a:last-child {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    a.main-logo img {
+        width: 200px;
+        padding-left: 17px;
+    }
+    .button-responsive{
+        display: block;
+        position: absolute;
+        right: 14px;
+        top: 4px;
+        width: 30px;
+        height: 30px;
+    }
+    .button-responsive span{
+        width: 100%;
+        height: 5px;
+        display: block;
+        background: $colorRed;
+        margin-bottom: 6px;
+    }
+    .links-visible{
+        display: block;
+    }
+}

@@ -1,0 +1,117 @@
+@import '../../../styles/variables';
+.into-courses{
+    width: $widthCanvas;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.title-courses{
+    font-weight: 800;
+    color: black;
+    font-size: $fontMedium;
+    position: relative;
+}
+.title-courses::before{
+    content: '';
+    width: 5px;
+    height: 22px;
+    background: $colorRed;
+    position: absolute;
+}
+.title-courses span{
+    padding-left: 13px;
+}
+.content-courses {
+    background: $simpleGray;
+    padding-bottom: 90px;
+}
+.row-controls {
+    display: flex;
+    justify-content: space-between;
+}
+.subtitle-courses{
+    font-size: $fontSmall;
+    color: $mediumGray;
+    font-weight: lighter;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-left: 17px;
+    display: block;
+}
+.control-item{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    border: solid 1px $mediumGray;
+    color: $mediumGray;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+.carousel-content {
+    overflow: hidden;
+}
+.carousel-slide{
+    white-space: nowrap;
+}
+.carousel-content .row{
+    width: 31.5%;
+    display: inline-block;
+    margin-right: 30px;
+}
+.carousel-content .row:last-child{
+    margin-right: 0px;
+}
+.type-card{
+    color: $mediumGray;
+    font-family: $fontSans;
+    font-size: $fontSmall;
+}
+.title-card{
+    font-size: $fontSemiBig;
+    color: black;
+    font-family: $fontSans;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+.description-card{
+    color: $mediumGray;
+    font-size: $fontSmall;
+    font-family: $fontSans;
+}
+.button-card{
+    background: $colorRed;
+    color: $colorWhite!important;
+    width: 120px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    font-family: $fontSans;
+    font-size: $fontSmall;
+    transition: $simple;
+    margin-bottom: 14px;
+}
+.button-card:hover{
+    opacity: 0.9;
+}
+.card .card-content {
+    padding-bottom: 15px;
+}
+@media screen and (max-width: 800px){
+    .main-banner{
+        height: 450px;
+    }
+    .carousel-content {
+        flex-flow: row wrap;
+    }
+    .carousel-content .row {
+        width: 100%;
+    }
+    .controls {
+        display: none;
+    }
+    .carousel-slide{
+        white-space: initial;
+    }
+}

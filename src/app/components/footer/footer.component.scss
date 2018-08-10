@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+.footer-links{
+    background: $colorBlueOne;
+}
+.footer-privacy{
+    background: $colorBlueTwo;
+    color: $colorWhite;
+    text-align: center;
+    line-height: 90px;
+    font-family: $fontSans;
+    font-size: $fontSmall;
+    font-weight: lighter;
+}
+.into-footer-links{
+    width: $widthCanvas;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 263px;
+}
+.title-footer{
+    color: $colorWhite;
+    font-size: $fontMedium;
+    margin-bottom: 12px;
+    font-family: $fontSans;
+}
+.link-footer{
+    font-size: $fontSmall;
+    color: $colorGray;
+    margin-bottom: 12px;
+    font-family: $fontSans;
+    line-height: 26px;
+}
+.grid-footer{
+    width: 20%;
+}
+@media screen and (max-width: 800px){
+    .grid-footer{
+        width: 100%;
+    }
+    .into-footer-links{
+        flex-flow: row wrap;
+        height: initial;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .footer-privacy{
+        line-height: 30px;
+        padding: 13px 20px;
+        position: relative;
+        top: -1px;
+    }
+}

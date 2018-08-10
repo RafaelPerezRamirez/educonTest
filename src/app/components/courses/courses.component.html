@@ -1,0 +1,41 @@
+<div class="content-courses">
+    <div class="into-courses">
+        <div class="title-courses">
+            <span>FEATURED COURSES</span>
+        </div>
+        <div class="row-controls">
+            <span class="subtitle-courses">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            <div class="controls">
+                <span class="control-item control-left"><i class="fas fa-angle-left"></i></span>
+                <span class="control-item control-right"><i class="fas fa-angle-right"></i></span>
+            </div>
+        </div>
+        <div class="carousel-content" id="carousel-content">
+            <div class="carousel-slide">
+                <div class="row" *ngFor="let course of courses">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-image">
+                                <img [src]= "course.image">
+                            </div>
+                            <div class="card-content">
+                                <div class="type-card">
+                                    {{course.type}}
+                                </div>
+                                <div class="title-card">
+                                    {{course.title}}
+                                </div>
+                                <div class="description-card">
+                                    {{course.description}}
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" class="button-card">APPLY NOW <i class="fas fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
